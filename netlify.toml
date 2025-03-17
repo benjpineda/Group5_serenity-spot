@@ -1,8 +1,9 @@
 [build]
-  command = "ng build --configuration=production"
-  publish = "dist/serenity-spot/browser"
+command = "ng build --configuration=production && ng run serenity-spot:server:production"
+publish = "dist/serenity-spot/browser"
+functions = "dist/serenity-spot/server"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
